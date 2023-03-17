@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+.container-flex{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    font-family: 'Hanken Grotesk',sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+.content{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    height: 70%;
+    overflow: hidden;
+    box-shadow: 1px 1px 10px 4px rgba(59, 58, 58, 0.158);
+}
+.result{
+    text-align: center;
+    width: 50%;
+    border-radius: 2rem;
+    background: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%)
+    );
+    padding: 2rem;
+}
+.result h2{
+    color:  hsl(241, 100%, 89%);
+    padding: 2rem 0rem;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+.result h3{
+    font-weight: 550;
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: hsl(221, 100%, 96%);
+}
+.result p{
+    color: hsl(241, 100%, 89%);
+    font-size: 13px;
+}
+#span{
+    font-size: 0.8rem;
+    color: hsl(241, 100%, 89%);
+    padding-top: 1rem;
+    font-weight: 500;
+}
+#circle{
+    background: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0)
+    );
+    width: 65%;
+    height: 40%;
+    padding-top: 3rem;
+    border-radius: 80%;
+    text-align: center;
+    font-size: 0.5rem;
+    margin: auto;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+#circle span{
+    font-weight: 800;
+    letter-spacing: 5px;
+    font-size: 35px;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#p{
+    width: 80%;
+    margin: auto;
+    line-height: 1rem;
+}
+.summary{
+    width: 50%;
+}
+.summary h2{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color:  hsl(224, 30%, 27%);
+    padding: 1rem 0rem;
+    margin:  1rem;
+}
+.summary article{
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem;
+}
+article svg{
+   width: 60px;
+   width: fit-content;
+   padding: 0 0.4rem;
+}
+#reaction{
+    font-weight: 600;
+}
+#memory{
+    font-weight: bolder;
+    color: hsl(39, 100%, 56%);
+}
+#verbal{
+    font-weight: bold;
+    color: hsl(166, 100%, 37%);
+}
+#visual{
+    font-weight: bolder;
+    color: hsl(234, 85%, 45%);
+}
+.points{
+    color: hsl(224, 30%, 27%);
+    font-size: 1.2rem;
+}
+.points p{
+    font-size: 1.2rem;
+}
+#num{
+    color: rgb(119, 115, 115);
+}
+button{
+    width: 85%;
+    margin-left: 1.4rem;
+    padding: 0.7rem;
+    border-radius: 2rem;
+    background: hsl(224, 30%, 27%);
+    color: hsl(0, 0%, 100%);
+    border: 1px solid  hsl(224, 30%, 27%);
+}
+button:hover{
+    background: hsl(241, 81%, 54%);
+    transition: ease 0.5s;
+    outline: none;
+}
+
+@media only screen and (max-width: 380px){
+    .container-flex{
+        width: 100%;
+        height: 100vh;
+        overflow: scroll;
+    }
+    .content{
+        width: fit-content;
+        height: auto;
+        flex-direction: column;
+        overflow: visible;
+        border-radius: 0;
+    }
+    .result{
+        width: 100%;
+        height: auto;
+        margin-top: - 1rem;
+    }
+    .result h2{
+        font-size: 19px;
+        font-weight: bolder;
+        padding-top: 4rem;
+    }
+    .result h3{
+        font-size:  1.5rem;
+    }
+    #circle{
+        width: 50%;
+        height: 40%;
+        padding: 2rem;
+    }
+    #circle span{
+        font-size: 3rem;
+    }
+    #p{
+        font-size:   1rem;
+        line-height: 1.4rem;
+        word-spacing: 2px;
+        font-weight: 550;
+        width: 90%;
+    }
+    .summary{
+        width: 90%;
+        height: auto;
+        margin: auto;
+    }
+    .summary h2{
+        padding: 0;
+        font-size:  1.2rem;
+        font-weight: 600;
+    }
+    button{
+        margin-bottom:  1rem;
+        font-size:  18px;
+        letter-spacing:  2px;
+        margin-left:  1.6rem;
+    }
+}
+
+@media only screen and (min-width: 1440px)
+{
+    .content{
+        height: 60%;
+    }
+    .result{
+        display: flex;
+        align-items: center;
+    }
+    .result-grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 95%;
+    }
+   .result h2{
+    font-size: 1.7rem;
+   }
+   .result h3{
+    font-size: 1.7rem;
+   }
+   #circle{
+    width: 70%;
+    height: 45%;
+    padding: 4rem;
+   }
+   #circle span{
+    font-size: 3rem;
+   }
+   #span{
+    font-size: 1rem;
+   }
+   #p{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    word-spacing: 0.2rem;
+    width: 90%;
+   }
+
+   .summary h2{
+    padding: 0.8rem 1rem;
+   }
+
+   .summary article{
+    padding: 1.3rem;
+    border-radius: 1.1rem;
+    width: 85%;
+    margin-left: 1.5rem;
+   }
+
+   article p{
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+   }
+   article svg{
+    height: 200%;
+    width: 2.3rem;
+    font-size: 2rem;
+    margin-right: 4px;
+   }
+   button{
+    padding: 1rem;
+    width: 85%;
+    font-size: 1rem;
+    margin-top: 1rem;
+   }
+  
+   #num{
+    font-size: 1rem;
+   }
+}
